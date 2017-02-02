@@ -1,0 +1,32 @@
+Author: Varun Sharma
+
+Filename: wiki_crawler.py
+          out.png
+
+Parameters:
+   - MAX_ITER - The amount of times a random Wikipedia page is going to be searched.
+   - MAX_TOLERANCE - Check the amount of times a page goes into infinite loop and breaks after the tolerance is exceeded.
+   - OUT_FILE - Output file where the Histogram distribution of the path lengths is stored.
+
+How to run:
+   - Extract the zip file to a folder onto your system.
+   - Open terminal/command prompt and move to the unzipped folder.
+   - Run the following command
+      - python wiki_crawler.py
+
+Output File:
+   out.png - Contains a histogram distribution of path lengths for 500 different Wikipedia pages,
+             discarding the ones that never reach the Philosophy page.
+
+Interface:
+   Wikipedia_Crawler
+      |
+      |__find_philosophy - Starts from a random Wikipedia URL and iterates until it reaches the Philosophy page (500 iterations).
+      |      |
+      |      |__get_first_link -- Retrieves the first valid URL from the current Wikipedia link.
+      |               |
+      |               |__ check_paragraph --- Checks the validity of a paragraph.
+      |                        |
+      |                        |__check_link ---- Checks the validity of the link.
+      |
+      |__plot_histogram - Creates a Histogram plot of the distribution obtained for different pages.
