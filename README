@@ -21,7 +21,7 @@ Output File:
 Interface:
    Wikipedia_Crawler
       |
-      |__find_philosophy - Picks a random Wiki page and iterates until it reaches the Philosophy page (500 iterations).
+      |__find_philosophy - Picks a random Wiki page and iterates until it reaches the Philosophy page.
       |      |
       |      |__get_first_link -- Retrieves the first valid URL from the current Wikipedia link.
       |               |
